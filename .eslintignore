@@ -1,0 +1,7 @@
+app.json
+package.json
+
+.eslintrc.js
+*.config.js
+
+.prettierrc.js 
