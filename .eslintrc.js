@@ -17,6 +17,9 @@ module.exports = {
   },
   rules: {
     'comma-dangle': 'off',
-    '@typescript-eslint/comma-dangle': 'off'
+    '@typescript-eslint/comma-dangle': 'off',
+    'global-require': 'off',
+    semi: 'off',
+    '@typescript-eslint/semi': 'off'
   }
-};
+}
