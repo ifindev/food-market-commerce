@@ -20,6 +20,7 @@ module.exports = {
     '@typescript-eslint/comma-dangle': 'off',
     'global-require': 'off',
     semi: 'off',
-    '@typescript-eslint/semi': 'off'
+    '@typescript-eslint/semi': 'off',
+    'object-curly-newline': 'off'
   }
 }
