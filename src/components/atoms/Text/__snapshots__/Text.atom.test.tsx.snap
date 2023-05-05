@@ -1,0 +1,185 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Text Atom Component should render Body12 correctly 1`] = `
+<Text
+  style={
+    [
+      {
+        "color": "#020202",
+      },
+      {
+        "fontFamily": "Poppins-Regular",
+      },
+      {
+        "fontSize": 13,
+      },
+    ]
+  }
+>
+  Hello
+</Text>
+`;
+
+exports[`Text Atom Component should render Body13 correctly 1`] = `
+<Text
+  style={
+    [
+      {
+        "color": "#020202",
+      },
+      {
+        "fontFamily": "Poppins-Regular",
+      },
+      {
+        "fontSize": 13,
+      },
+    ]
+  }
+>
+  Hello
+</Text>
+`;
+
+exports[`Text Atom Component should render Body14 correctly 1`] = `
+<Text
+  style={
+    [
+      {
+        "color": "#020202",
+      },
+      {
+        "fontFamily": "Poppins-Regular",
+      },
+      {
+        "fontSize": 14,
+        "lineHeight": 20,
+      },
+    ]
+  }
+>
+  Hello
+</Text>
+`;
+
+exports[`Text Atom Component should render Body16 correctly 1`] = `
+<Text
+  style={
+    [
+      {
+        "color": "#020202",
+      },
+      {
+        "fontFamily": "Poppins-Regular",
+      },
+      {
+        "fontSize": 16,
+        "lineHeight": 24,
+      },
+    ]
+  }
+>
+  Hello
+</Text>
+`;
+
+exports[`Text Atom Component should render Body18 correctly 1`] = `
+<Text
+  style={
+    [
+      {
+        "color": "#020202",
+      },
+      {
+        "fontFamily": "Poppins-Regular",
+      },
+      {
+        "fontSize": 18,
+        "lineHeight": 28,
+      },
+    ]
+  }
+>
+  Hello
+</Text>
+`;
+
+exports[`Text Atom Component should render Body20 correctly 1`] = `
+<Text
+  style={
+    [
+      {
+        "color": "#020202",
+      },
+      {
+        "fontFamily": "Poppins-Regular",
+      },
+      {
+        "fontSize": 20,
+        "lineHeight": 28,
+      },
+    ]
+  }
+>
+  Hello
+</Text>
+`;
+
+exports[`Text Atom Component should render HeadingOne correctly 1`] = `
+<Text
+  style={
+    [
+      {
+        "color": "#020202",
+      },
+      {
+        "fontFamily": "Poppins-Medium",
+      },
+      {
+        "fontSize": 32,
+      },
+    ]
+  }
+>
+  Hello
+</Text>
+`;
+
+exports[`Text Atom Component should render HeadingThree correctly 1`] = `
+<Text
+  style={
+    [
+      {
+        "color": "#020202",
+      },
+      {
+        "fontFamily": "Poppins-Medium",
+      },
+      {
+        "fontSize": 22,
+      },
+    ]
+  }
+>
+  Hello
+</Text>
+`;
+
+exports[`Text Atom Component should render HeadingTwo correctly 1`] = `
+<Text
+  style={
+    [
+      {
+        "color": "#020202",
+      },
+      {
+        "fontFamily": "Poppins-Medium",
+      },
+      {
+        "fontSize": 22,
+      },
+    ]
+  }
+>
+  Hello
+</Text>
+`;
