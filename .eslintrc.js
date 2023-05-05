@@ -21,6 +21,8 @@ module.exports = {
     'global-require': 'off',
     semi: 'off',
     '@typescript-eslint/semi': 'off',
-    'object-curly-newline': 'off'
+    'object-curly-newline': 'off',
+    'react/require-default-props': 'off', // Since we do not use prop-types,
+    'import/no-cycle': 'off'
   }
 }
