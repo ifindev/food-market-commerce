@@ -11,7 +11,7 @@ const SplashContainer = styled(
 )
 const SplashText = styled(Text.HeadingOne, clsx('mt-[30px]'))
 
-export default function SplashScreen() {
+export default function SplashView() {
   return (
     <SplashContainer>
       <Logo />
