@@ -2,4 +2,4 @@
 . "$(dirname -- "$0")/_/husky.sh"
 
 npx --no-install lint-staged
-yarn test --watchAll=false --passWithNoTests
+CI=true yarn test --watchAll=false --passWithNoTests yarn test --watchAll=false --passWithNoTests
