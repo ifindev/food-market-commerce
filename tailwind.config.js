@@ -4,16 +4,23 @@ module.exports = {
   theme: {
     extend: {
       colors: {
+        green: {
+          active: '#1ABC9C'
+        },
         black: {
           darkish: '#020202'
         },
         grey: {
+          lighterer: '#FAFAFC',
           lightest: '#F9FAFF',
           light: '#FAFAFC',
           lightish: '#8D92A3'
         },
         yellow: {
           DEFAULT: '#FFC700'
+        },
+        red: {
+          danger: '#D9435E'
         }
       },
       fontFamily: {
