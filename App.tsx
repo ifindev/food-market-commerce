@@ -1,7 +1,7 @@
 import { NavigationContainer } from '@react-navigation/native'
 import React from 'react'
 import useGlobalFonts from './src/hooks/useGlobalFonts/useGlobalFonts.hook'
-import SignInView from './src/views/SignIn/SignIn.view'
+import Router from './src/router/Router'
 
 export default function App() {
   const fontsLoaded = useGlobalFonts()
@@ -12,8 +12,7 @@ export default function App() {
 
   return (
     <NavigationContainer>
-      {/* <SplashView /> */}
-      <SignInView />
+      <Router />
     </NavigationContainer>
   )
 }

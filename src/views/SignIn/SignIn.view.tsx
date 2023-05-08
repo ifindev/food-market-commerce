@@ -1,3 +1,5 @@
+import { useNavigation } from '@react-navigation/native'
+import { NativeStackNavigationProp } from '@react-navigation/native-stack'
 import clsx from 'clsx'
 import { styled } from 'nativewind'
 import React, { useCallback, useState } from 'react'
@@ -5,6 +7,7 @@ import { SafeAreaView, View } from 'react-native'
 import { SignInParams } from '../../Model/auth.model'
 import { Button } from '../../components/atoms'
 import { Header, InputText } from '../../components/molecules'
+import { StackParams } from '../../router/Router'
 
 const Container = styled(SafeAreaView, clsx('flex-1 bg-white'))
 const Spacer = styled(View, clsx('h-6 bg-grey-lighterer'))
@@ -15,6 +18,8 @@ const ButtonsSpacer = styled(View, clsx('h-3'))
 
 // TODO: Move logic to viewModel & add form validations
 export default function SignInView() {
+  const navigation = useNavigation<NativeStackNavigationProp<StackParams>>()
+
   const [formValues, setFormValues] = useState<SignInParams>({
     Email: '',
     Password: ''
@@ -62,7 +67,7 @@ export default function SignInView() {
           <Button
             text="Create New Account"
             variant="secondary"
-            onClick={() => {}}
+            onClick={() => navigation.navigate('SignUp')}
           />
         </ButtonContainer>
       </FormContainer>
