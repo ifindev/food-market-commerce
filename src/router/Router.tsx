@@ -1,7 +1,7 @@
 import { createStackNavigator } from '@react-navigation/stack'
 import React from 'react'
 import SignInView from '../views/SignIn/SignIn.view'
-import SignUpView from '../views/SignUp/SingUp.view'
+import SignUpView from '../views/SignUp/SignUp.view'
 
 export type StackParams = {
   SignIn: undefined
