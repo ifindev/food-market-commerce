@@ -14,7 +14,8 @@ module.exports = {
           lighterer: '#FAFAFC',
           lightest: '#F9FAFF',
           light: '#FAFAFC',
-          lightish: '#8D92A3'
+          lightish: '#8D92A3',
+          lighterish: '#F0F0F0'
         },
         yellow: {
           DEFAULT: '#FFC700'
