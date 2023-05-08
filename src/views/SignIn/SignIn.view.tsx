@@ -3,18 +3,14 @@ import { NativeStackNavigationProp } from '@react-navigation/native-stack'
 import clsx from 'clsx'
 import { styled } from 'nativewind'
 import React, { useCallback, useState } from 'react'
-import { SafeAreaView, View } from 'react-native'
+import { View } from 'react-native'
 import { SignInParams } from '../../Model/auth.model'
-import { Button } from '../../components/atoms'
-import { Header, InputText } from '../../components/molecules'
+import { Button, Spacer } from '../../components/atoms'
+import { InputText } from '../../components/molecules'
+import { ContainerWithHeader } from '../../components/templates'
 import { StackParams } from '../../router/Router'
 
-const Container = styled(SafeAreaView, clsx('flex-1 bg-white'))
-const Spacer = styled(View, clsx('h-6 bg-grey-lighterer'))
-const FormContainer = styled(View, clsx('flex-1 bg-white pt-[26px] px-6'))
 const ButtonContainer = styled(View, clsx('mt-6'))
-const InputSpacer = styled(View, clsx('h-4'))
-const ButtonsSpacer = styled(View, clsx('h-3'))
 
 // TODO: Move logic to viewModel & add form validations
 export default function SignInView() {
@@ -24,6 +20,7 @@ export default function SignInView() {
     Email: '',
     Password: ''
   })
+  const [currentFocus, setCurrentFocus] = useState<keyof typeof formValues>()
 
   const handleFormChange = useCallback(
     (field: keyof typeof formValues, value: string) => {
@@ -34,43 +31,42 @@ export default function SignInView() {
     },
     []
   )
-  const [currentFocus, setCurrentFocus] = useState<'email' | 'password'>()
 
   return (
-    <Container>
-      <Header title="Sign In" subTitle="Find your best meal ever" />
-      <Spacer />
-      <FormContainer>
-        <InputText
-          label="Email Address"
-          text={formValues.Email}
-          placeholder="Type your email address"
-          currentlyFocused={currentFocus === 'email'}
-          onChangeText={(value: string) => handleFormChange('Email', value)}
-          onFocus={() => setCurrentFocus('email')}
-          onBlur={() => setCurrentFocus(undefined)}
+    <ContainerWithHeader
+      title="Sign In"
+      subTitle="Find your best meal ever"
+      withInnerPadding
+    >
+      <InputText
+        label="Email Address"
+        text={formValues.Email}
+        placeholder="Type your email address"
+        currentlyFocused={currentFocus === 'Email'}
+        onChangeText={(value: string) => handleFormChange('Email', value)}
+        onFocus={() => setCurrentFocus('Email')}
+        onBlur={() => setCurrentFocus(undefined)}
+      />
+      <Spacer height={16} />
+      <InputText
+        label="Password"
+        isPasswordField
+        text={formValues.Password}
+        placeholder="Type your password"
+        currentlyFocused={currentFocus === 'Password'}
+        onChangeText={(value: string) => handleFormChange('Password', value)}
+        onFocus={() => setCurrentFocus('Password')}
+        onBlur={() => setCurrentFocus(undefined)}
+      />
+      <ButtonContainer>
+        <Button text="Sign In" variant="primary" onClick={() => {}} />
+        <Spacer height={12} />
+        <Button
+          text="Create New Account"
+          variant="secondary"
+          onClick={() => navigation.navigate('SignUp')}
         />
-        <InputSpacer />
-        <InputText
-          label="Password"
-          isPasswordField
-          text={formValues.Password}
-          placeholder="Type your password"
-          currentlyFocused={currentFocus === 'password'}
-          onChangeText={(value: string) => handleFormChange('Password', value)}
-          onFocus={() => setCurrentFocus('password')}
-          onBlur={() => setCurrentFocus(undefined)}
-        />
-        <ButtonContainer>
-          <Button text="Sign In" variant="primary" onClick={() => {}} />
-          <ButtonsSpacer />
-          <Button
-            text="Create New Account"
-            variant="secondary"
-            onClick={() => navigation.navigate('SignUp')}
-          />
-        </ButtonContainer>
-      </FormContainer>
-    </Container>
+      </ButtonContainer>
+    </ContainerWithHeader>
   )
 }
