@@ -23,6 +23,8 @@ module.exports = {
     '@typescript-eslint/semi': 'off',
     'object-curly-newline': 'off',
     'react/require-default-props': 'off', // Since we do not use prop-types,
-    'import/no-cycle': 'off'
+    'import/no-cycle': 'off',
+    'function-paren-newline': 'off', // conflict with prettier,
+    'implicit-arrow-linebreak': 'off' // conflict with prettier,
   }
 }
