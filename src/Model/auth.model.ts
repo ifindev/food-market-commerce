@@ -1,15 +1,15 @@
 export interface SignInParams {
-  Email: string
-  Password: string
+  email: string
+  password: string
 }
 
 export interface SignUpParams extends SignInParams {
-  FullName: string
+  fullName: string
 }
 
 export interface AddressParams {
-  PhoneNumber: string
-  Address: string
-  HouseNumber: number
-  City: string
+  phoneNumber: string
+  address: string
+  houseNumber: number
+  city: string
 }
