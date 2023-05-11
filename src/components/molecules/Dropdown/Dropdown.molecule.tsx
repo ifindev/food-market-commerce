@@ -1,7 +1,8 @@
 import clsx from 'clsx'
 import { styled } from 'nativewind'
 import React, { useCallback, useState } from 'react'
-import { FlatList, Pressable, Text, TextInput, View } from 'react-native'
+import { FlatList, Text, TextInput, View } from 'react-native'
+import { TouchableOpacity } from 'react-native-gesture-handler'
 import { ChevronDown } from '../../../assets/icons'
 
 const InputContainer = styled(View, clsx('relative'))
@@ -33,11 +34,11 @@ function PickerItem({
   onPress: () => void
 }) {
   return (
-    <Pressable onLongPress={onLongPress} onPress={onPress}>
-      <StyledView className={clsx('px-2 py-4 bg-white', `${selected && 'bg-slate-100'}`)}>
+    <TouchableOpacity onLongPress={onLongPress} onPress={onPress} activeOpacity={1}>
+      <StyledView className={clsx('px-2 py-4 bg-white', `${selected && 'bg-gray-200'}`)}>
         <Text>{text}</Text>
       </StyledView>
-    </Pressable>
+    </TouchableOpacity>
   )
 }
 
@@ -61,12 +62,6 @@ export default function Picker() {
 
     setIsOptionsModalOpen(false)
   }, [selectedValue, isOptionsModalOpen])
-
-  const getItemLayout = (data: DropdownDataProps[], index: number) => ({
-    length: 50,
-    offset: 50 * index,
-    index
-  })
 
   const data: DropdownDataProps[] = [
     { id: '1', label: 'Item 1', value: '1' },
@@ -94,11 +89,9 @@ export default function Picker() {
         </InputIconContainer>
       </InputContainer>
       {isOptionsModalOpen && (
-        <StyledView className="border border-gray-200 h-36 w-full mt-1 rounded">
+        <StyledView className="border border-black-darkish h-60 w-full mt-1 rounded-lg">
           <FlatList
-            getItemLayout={getItemLayout}
-            initialScrollIndex={parseInt(currentFocus, 10) - 1}
-            style={{ borderRadius: 4 }}
+            style={{ borderRadius: 8 }}
             data={data}
             keyExtractor={(item) => item.id}
             renderItem={({ item }) => (
