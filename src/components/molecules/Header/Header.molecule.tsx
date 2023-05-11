@@ -2,19 +2,13 @@ import clsx from 'clsx'
 import { styled } from 'nativewind'
 import React from 'react'
 import { Pressable, View } from 'react-native'
-import { ArrowBack } from '../../../assets/icons'
+import { ChevronBack } from '../../../assets/icons'
 import { Text } from '../../atoms'
 
-const Container = styled(
-  View,
-  clsx('bg-white flex flex-row items-center h-[108px] py-[30px] px-6')
-)
+const Container = styled(View, clsx('bg-white flex flex-row items-center h-[108px] py-[30px] px-6'))
 const TextContainer = styled(View)
 const BackButton = styled(Pressable, clsx('p-4 pl-0 mr-4'))
-const SubTitle = styled(
-  Text.Body14,
-  clsx('text-grey-lightish font-poppins-light')
-)
+const SubTitle = styled(Text.Body14, clsx('text-grey-lightish font-poppins-light'))
 
 export type HeaderProps = {
   title: string
@@ -27,7 +21,7 @@ export default function Header({ title, subTitle, onPressBack }: HeaderProps) {
     <Container>
       {onPressBack && (
         <BackButton onPress={onPressBack} hitSlop={20}>
-          <ArrowBack />
+          <ChevronBack />
         </BackButton>
       )}
       <TextContainer>

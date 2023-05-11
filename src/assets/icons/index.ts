@@ -1,3 +1,2 @@
-// Temporary disable since we only export single file for now
-/* eslint-disable import/prefer-default-export */
-export { default as ArrowBack } from './ArrowBack.svg'
+export { default as ChevronBack } from './ChevronBack.svg'
+export { default as ChevronDown } from './ChevronDown.svg'
